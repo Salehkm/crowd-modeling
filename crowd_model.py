@@ -71,20 +71,22 @@ def update(t):
     global p1,p2,first,path1
     if(first):
         first=False
-        return point2,point1
+        return point2,point1, p1_line, p2_line
 
     p1,p2=pedestrian_update(p1,p2)
     # set point's coordinates
 
     point1.set_data([p1.x_next[0]],[p1.x_next[1]])
     point2.set_data([p2.x_next[0]],[p2.x_next[1]])
+    p1_line.set_data(np.append(p1_line.get_xdata(), [p1.x_next[0]]), np.append(p1_line.get_ydata(), [p1.x_next[1]]))
+    p2_line.set_data(np.append(p2_line.get_xdata(), [p2.x_next[0]]), np.append(p2_line.get_ydata(), [p2.x_next[1]]))
 
     p1.v_current=p1.v_next
     p2.v_current=p2.v_next
     p1.x_current=p1.x_next
     p2.x_current=p2.x_next
 
-    return point2,point1
+    return point2,point1,p1_line, p2_line
 
 
 # create a figure with an axes
@@ -96,6 +98,8 @@ ax.set_aspect("equal")
 # create a point in the axes
 point1, = ax.plot(-5,0, marker="o")
 point2, = ax.plot(5,0, marker="o")
+p1_line, = ax.plot([], [], linestyle="-", color="b")
+p2_line, = ax.plot([], [], linestyle="-", color="b")
 
 
 p1=Pedestrians(
