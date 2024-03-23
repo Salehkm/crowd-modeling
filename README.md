@@ -1,5 +1,5 @@
 # crowd-modeling
-
+phase 1
 
 this repo contains the code of crowd simuliation with many phases
 
