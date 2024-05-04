@@ -229,7 +229,6 @@ p2=Pedestrians(
                f_drive=np.array([0,0]),
                f_ab=np.array([0,0]))
 
-<<<<<<< HEAD
 p3=Pedestrians(
 
                v_desired=np.array([0.1,0.1]),
@@ -284,14 +283,13 @@ p6=Pedestrians(
 
 # Updating function, to be repeatedly called by the animation
 
-=======
->>>>>>> 787b4b1b174b8cf57847b70f0f892a26b7dd87d4
 first=True
+# create animation with 10ms interval, which is repeated,
 ani = FuncAnimation(fig, update, blit=True, repeat=True,
                     frames=300)
-writer = PillowWriter(fps=100,
-                                metadata=dict(artist='Me'),
-                                bitrate=1800)
-ani.save('C:/Users/alkha/Downloads/scatter.gif', writer=writer)
+# writer = PillowWriter(fps=100,
+#                                 metadata=dict(artist='Me'),
+#                                 bitrate=1800)
+# ani.save('C:/Users/alkha/Downloads/scatter.gif', writer=writer)
 
 plt.show()
