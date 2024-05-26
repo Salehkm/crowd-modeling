@@ -1,7 +1,5 @@
-# crowd-modeling
-phase 1
+# pedistrian_dynamics_simulation
 
-this repo contains the code of crowd simuliation with many phases
+This project focuses on utilizing a social forces model to study pedestrian dynamics in crowded spaces. By considering pedestrians as interacting particles influenced by factors such as personal space, destination, and social interactions, the model aims to replicate observed pedestrian behaviors. The project explores the impact of crowd density, environmental obstacles, and psychological/cultural factors on pedestrian movement to enhance the model's accuracy and applicability. The findings contribute to urban planning, architecture, and safety management by providing insights into optimizing crowd flow and informing crowd management strategies in crowded environments.
 
-![scatter](https://github.com/Salehkm/crowd-modeling/assets/40856846/c8bf1ac9-77cf-41dc-a766-3a87a26ad035)
-
+![scatter](https://github.com/Salehkm/crowd-modeling/assets/133630055/902280e7-0e13-46ad-ae23-b6bbf2e44a6b)
